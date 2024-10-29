@@ -1,0 +1,218 @@
+
+#app-bar{
+	width:100%;
+	height: 70px;
+	position: fixed;
+	bottom:0;
+	background-color: white;
+	z-index: 999999;
+    box-shadow: 0 0 3px rgba(0,0,0,0.4);
+    line-height: 1!important;
+    display: none;
+}
+
+#app-bar p {
+    margin:0;
+}
+.app-price{
+    display:inline-block;
+}
+#app-bar .app-banner-rating-container,
+#app-bar .app-banner-star{
+    width: 70px;
+}
+#app-bar .app-banner-rating-container,
+#app-bar .app-banner-star,
+#app-bar .app-banner-current-rating{
+    height: 14px;
+}
+#app-bar .app-banner-rating-container {
+
+}
+#app-bar .app-banner-star {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAAkklEQVR4AdXTMQrDMAyF4UIgmydBB68BDwZBQEf7709rjFtwRdRka/M2oW94Ir49LuaXwfwhyDz5BhS9ABCsRc4D7UBPAhI2kgLASuJOpqBvoBRymyZWDyoWpHqwBKSy+A7HpK0flH4Rv+6Bu9B0qQCIAxKD7ECOwTbWSov1bCHopZU0+ihGjcGOfPyGuwf//qafuZqXBK6OLwsAAAAASUVORK5CYII=);
+}
+#app-bar .app-banner-current-rating {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAAlklEQVR4AdXTQQ3DMAyF4UEohEIJFEOY9BMIpEIIBEMwhDLwoiqqFFn12tvWd7P8HZ7VvPxhfhnMH4LMk2/AsAcAwXvkPrAD2E1AwUdKAlgpvKk07ARGo/ZpYY1A8SQawZIQZYkdrklfvygdyLkeQbjQdKkESACSgxpAzcE21lqPH9lyoDhGGX0MR3Owz78cwh7Bv7/pD0t39Qi2PqJ9AAAAAElFTkSuQmCC) left top;
+}
+#app-bar .app-banner-current-rating,
+#app-bar .app-banner-star{
+    background-size: contain;
+}
+
+@media screen and (max-width:1024px){
+    body.app-bar-shown #layoutcontainer{
+        margin-top: 100px;
+    }
+
+    #app-bar .app-close{
+        display:inline-block;
+        width: 40px;
+        height:100%;
+        vertical-align: middle;
+        cursor: pointer;
+        float:left;
+    }
+    #app-bar .app-close:before{
+        content: "";
+        background-color: #828282;
+        height: 10;
+        width: 2px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 20px;
+        height: 15px;
+        margin: auto;
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+
+    }
+    #app-bar .app-close:after{
+        content: "";
+        background-color: #828282;
+        height: 10;
+        width: 2px;
+        position: absolute;
+        top: 0;
+        left: 20px;
+        bottom: 0;
+        height: 15px;
+        margin: auto;
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+
+    }
+    #app-bar .app-content{
+        width: calc(100% - 95px);
+        height: 100%;
+        float: left;
+    }
+    #app-bar .rel-wrap{
+        width: 100%;
+        height: 100%;
+    }
+
+    #app-bar .app-image-wrap{
+        float: left;
+        height: 100%;
+        width: 70px;
+        position: relative;
+        margin-right: -8px;
+        margin-left: -10px;
+    }
+    #app-bar .app-img{
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        display: block;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 80%;
+        height: 80%;
+        border: 1px solid #e6e1e1;
+        border-radius: 14px;
+        background-size: cover;
+        background-position:center center;
+    }
+
+    /*body.app-banner-device-iphone #app-bar .app-img:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 80%;
+        width: 80%;
+        margin: auto;
+        background-image: url(mask.png);
+        background-size: 90%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background: transparent;
+        !*border-radius: 15px;
+        border: 1px solid #e2dfdf;*!
+        z-index: 2;
+    }*/
+
+    #app-bar .app-title{
+        float:left;
+        height: 100%;
+        width: calc(100% - 70px);
+        text-align: left;
+        padding: 4px 0 0px 10px;
+        box-sizing: border-box;
+    }
+    #app-bar .app-title p{
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+    }
+    #app-bar .app-title p a{
+        font-size: 15px;
+        font-family: Poppins;
+        color: #414141;
+    }
+
+    #app-bar .app-open{
+        float: right;
+        height: 100%;
+        width: auto;
+        box-sizing: border-box;
+        padding-right: 0px;
+        padding: 0 15px 0 0;
+    }
+    #app-bar .app-open>a{
+        color: #4087f7;
+        font-size: 16px;
+        font-family: Poppins;
+        display: block;
+        height: 70px;
+        line-height: 70px;
+    }
+
+    body.app-banner-device-google #app-bar {
+
+    }
+    body.app-banner-device-iphone #app-bar {
+
+    }
+
+    #app-bar.active
+    {
+        display: block;
+    }
+    #app-bar.non-active
+    {
+        display: none;
+    }
+
+    #app-bar, body .app-content, body .app-img:after,body .app-close,body .app-open{
+        background: rgb(242,242,242); /* Old browsers */
+        background: -moz-linear-gradient(top, rgba(242,242,242,1) 0%, rgba(242,242,242,1) 53%, rgba(209,209,209,1) 101%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(242,242,242,1) 0%,rgba(242,242,242,1) 53%,rgba(209,209,209,1) 101%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(242,242,242,1) 0%,rgba(242,242,242,1) 53%,rgba(209,209,209,1) 101%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#d1d1d1',GradientType=0 ); /* IE6-9 */
+    }
+    body .app-content, body .app-img:after,body .app-close,body .app-open{
+    z-index: -1;
+    }
+    html.app-banner-margin-top.top-active, #wpadminbar.app-banner-margin-top{
+        margin-top:70px!important;
+    }
+    html.app-banner-margin-bottom.bot-active{
+        margin-bottom:70px!important;
+    }
+}
+
+
+
